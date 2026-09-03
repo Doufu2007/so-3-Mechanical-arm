@@ -1,0 +1,70 @@
+{
+  "arm": "franka_ex",
+  "lam_values": [
+    0.0,
+    0.1,
+    0.5,
+    1.0,
+    5.0
+  ],
+  "rows": [
+    {
+      "lam": 0.0,
+      "r2_global_mean": 0.9643105864524841,
+      "r2_global_std": 0.001731288545486982,
+      "n_seeds": 3,
+      "g_rel_err": 0.6700616666030802,
+      "ctrl_rmse_mrad": 30.86766095785368
+    },
+    {
+      "lam": 0.1,
+      "r2_global_mean": 0.9661300579706827,
+      "r2_global_std": 0.006110270448929121,
+      "n_seeds": 3,
+      "g_rel_err": 0.3644494794244668,
+      "ctrl_rmse_mrad": 20.799364962067518
+    },
+    {
+      "lam": 0.5,
+      "r2_global_mean": 0.9690532088279724,
+      "r2_global_std": 0.005232887100998226,
+      "n_seeds": 3,
+      "g_rel_err": 0.15283738459537718,
+      "ctrl_rmse_mrad": 12.45132667043022
+    },
+    {
+      "lam": 1.0,
+      "r2_global_mean": 0.9734736879666647,
+      "r2_global_std": 0.002774919894304716,
+      "n_seeds": 3,
+      "g_rel_err": 0.10710919444004728,
+      "ctrl_rmse_mrad": 10.571387583891013
+    },
+    {
+      "lam": 5.0,
+      "r2_global_mean": 0.9723488092422485,
+      "r2_global_std": 0.002552898618679425,
+      "n_seeds": 3,
+      "g_rel_err": 0.11105659556559645,
+      "ctrl_rmse_mrad": 8.189640357115216
+    }
+  ],
+  "references": {
+    "ctrl_rmse_mrad_adaptive_lam0": 36.00097953402308,
+    "ctrl_rmse_mrad_mlp": 10.625716728834107,
+    "ctrl_rmse_mrad_true": 8.685587005809538e-06,
+    "ctrl_rmse_mrad_none": 40.99255974739975
+  },
+  "note": "R² 为 3 seeds 测试集 r2_global 聚合；g(q) 误差与闭环 RMSE 用 seed0 （物理核验与闭环只跑了 seed0）。闭环任务为重力补偿定点调节。",
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-24 09:28:17",
+    "command": "/home/claudeuser/so3-env/bin/python paper/lam_tradeoff.py"
+  }
+}

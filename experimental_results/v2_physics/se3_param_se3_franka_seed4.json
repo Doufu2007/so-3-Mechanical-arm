@@ -1,0 +1,89 @@
+{
+  "checkpoint": "/root/so3李群机械臂/results_v2/se3_franka_seed4.pth",
+  "variant": "se3",
+  "arm": "franka",
+  "seed": 4,
+  "summary": {
+    "mass_rel_err_mean": 0.9216373836000761,
+    "com_err_m_mean": 0.08599961115399231,
+    "I_rel_err_mean": 4.679166593703083,
+    "mass_rel_err_median": 0.42920996745427453
+  },
+  "per_link": [
+    {
+      "body": "link0",
+      "mass_true": 1.5,
+      "mass_learned": 0.6941471695899963,
+      "mass_rel_err": 0.5372352202733358,
+      "com_err_m": 0.1,
+      "I_rel_err": 1.3544991827409951
+    },
+    {
+      "body": "link1",
+      "mass_true": 1.5,
+      "mass_learned": 0.7604317665100098,
+      "mass_rel_err": 0.49304548899332684,
+      "com_err_m": 0.038388078876048226,
+      "I_rel_err": 7.451581609459322
+    },
+    {
+      "body": "link2",
+      "mass_true": 1.2,
+      "mass_learned": 0.7615506649017334,
+      "mass_rel_err": 0.36537444591522217,
+      "com_err_m": 0.004723412014269034,
+      "I_rel_err": 19.985864171900786
+    },
+    {
+      "body": "link3",
+      "mass_true": 1.0,
+      "mass_learned": 0.7547146677970886,
+      "mass_rel_err": 0.24528533220291138,
+      "com_err_m": 0.08604972293757367,
+      "I_rel_err": 3.7170399385488357
+    },
+    {
+      "body": "link4",
+      "mass_true": 0.8,
+      "mass_learned": 0.7092328071594238,
+      "mass_rel_err": 0.11345899105072027,
+      "com_err_m": 0.23212483068690132,
+      "I_rel_err": 2.0645504678104873
+    },
+    {
+      "body": "link5",
+      "mass_true": 0.5,
+      "mass_learned": 0.5554326772689819,
+      "mass_rel_err": 0.11086535453796387,
+      "com_err_m": 0.08798135249492509,
+      "I_rel_err": 0.8731348525739471
+    },
+    {
+      "body": "link6",
+      "mass_true": 0.3,
+      "mass_learned": 0.5509743094444275,
+      "mass_rel_err": 0.836581031481425,
+      "com_err_m": 0.04997217786963298,
+      "I_rel_err": 0.7822132176856988
+    },
+    {
+      "body": "hand",
+      "mass_true": 0.1,
+      "mass_learned": 0.5671253204345703,
+      "mass_rel_err": 4.671253204345703,
+      "com_err_m": 0.08875731435258817,
+      "I_rel_err": 1.2044493089045825
+    }
+  ],
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-25 19:35:02",
+    "command": "/home/claudeuser/so3-env/bin/python paper/se3_param_check.py --pattern se3*_seed*.pth"
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "task": "gravity-compensated setpoint regulation",
+  "controllers": [
+    "pd",
+    "pd_grav_mlp",
+    "pd_grav_learn",
+    "pd_grav_true"
+  ],
+  "kp": 100.0,
+  "kd": 14.0,
+  "n_postures": 8,
+  "records": [
+    {
+      "controller": "pd",
+      "posture": 0,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.036954009554092754,
+      "max_abs_err_rad": 0.08151050060416237
+    },
+    {
+      "controller": "pd",
+      "posture": 1,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.06861141097094496,
+      "max_abs_err_rad": 0.16401763619330956
+    },
+    {
+      "controller": "pd",
+      "posture": 2,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.018196039277353023,
+      "max_abs_err_rad": 0.035562318336968546
+    },
+    {
+      "controller": "pd",
+      "posture": 3,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.049234119892591036,
+      "max_abs_err_rad": 0.1201900713405728
+    },
+    {
+      "controller": "pd",
+      "posture": 4,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.007669413002397086,
+      "max_abs_err_rad": 0.018270312610022738
+    },
+    {
+      "controller": "pd",
+      "posture": 5,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.052183568367617866,
+      "max_abs_err_rad": 0.12205825297864886
+    },
+    {
+      "controller": "pd",
+      "posture": 6,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.03379426853079573,
+      "max_abs_err_rad": 0.07874080584095328
+    },
+    {
+      "controller": "pd",
+      "posture": 7,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.0612976483834056,
+      "max_abs_err_rad": 0.14532183674332477
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 0,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.012123263955559188,
+      "max_abs_err_rad": 0.029130451438859825
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 1,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.005390250693273961,
+      "max_abs_err_rad": 0.010177578553422717
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 2,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.013195544750448169,
+      "max_abs_err_rad": 0.02986140060753087
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 3,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.005353112669158387,
+      "max_abs_err_rad": 0.012886016924145038
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 4,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.006162357627085683,
+      "max_abs_err_rad": 0.014764535623829483
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 5,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.01757995446598504,
+      "max_abs_err_rad": 0.03996028506059135
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 6,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.012299088827225881,
+      "max_abs_err_rad": 0.0291664034299155
+    },
+    {
+      "controller": "pd_grav_mlp",
+      "posture": 7,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.012902160841936544,
+      "max_abs_err_rad": 0.03146888136788056
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 0,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.02735405411335937,
+      "max_abs_err_rad": 0.06320872179335188
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 1,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.05859316217509418,
+      "max_abs_err_rad": 0.14197556743689455
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 2,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.007358593957658954,
+      "max_abs_err_rad": 0.017839885799826316
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 3,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.04375944026929203,
+      "max_abs_err_rad": 0.1068345162638421
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 4,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.010951482893669384,
+      "max_abs_err_rad": 0.02675810389176707
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 5,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.034248936812680555,
+      "max_abs_err_rad": 0.08242028940150092
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 6,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.02847846748195186,
+      "max_abs_err_rad": 0.06805746949352853
+    },
+    {
+      "controller": "pd_grav_learn",
+      "posture": 7,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 0.04660658125118723,
+      "max_abs_err_rad": 0.11230549646105992
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 0,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 7.760565749913161e-09,
+      "max_abs_err_rad": 6.694727108791376e-08
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 1,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 1.5884083408863265e-08,
+      "max_abs_err_rad": 1.664469817530545e-07
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 2,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 1.9476415876721446e-09,
+      "max_abs_err_rad": 1.7938290450270067e-08
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 3,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 6.331442456269951e-09,
+      "max_abs_err_rad": 6.029013055464105e-08
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 4,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 1.1404125047059835e-09,
+      "max_abs_err_rad": 8.058390094101142e-09
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 5,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 9.188356518658637e-09,
+      "max_abs_err_rad": 9.375412979295561e-08
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 6,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 9.756264802625112e-09,
+      "max_abs_err_rad": 7.434088306057518e-08
+    },
+    {
+      "controller": "pd_grav_true",
+      "posture": 7,
+      "kp": 100.0,
+      "stable": true,
+      "rmse_rad": 1.7475929017768056e-08,
+      "max_abs_err_rad": 1.5945041670351046e-07
+    }
+  ],
+  "summary": {
+    "pd": {
+      "rmse_mean": 0.04099255974739975,
+      "rmse_std": 0.02093015013809409
+    },
+    "pd_grav_mlp": {
+      "rmse_mean": 0.010625716728834106,
+      "rmse_std": 0.004477283789025393
+    },
+    "pd_grav_learn": {
+      "rmse_mean": 0.0321688398693617,
+      "rmse_std": 0.017516879842504815
+    },
+    "pd_grav_true": {
+      "rmse_mean": 8.685587005809537e-09,
+      "rmse_std": 5.8458143618626065e-09
+    }
+  },
+  "ckpt_phys": "/root/so3李群机械臂/results_v2/no_adaptive_lam_franka_ex_seed0.pth",
+  "ckpt_mlp": "/root/so3李群机械臂/results_v2/mlp_franka_ex_seed0.pth",
+  "plant": "MuJoCo tool/panda.xml（简化 7 轴串联臂，无关节阻尼；J7 锁住不计入）",
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-27 00:22:23",
+    "command": "/home/claudeuser/so3-env/bin/python paper/control_sim.py --ckpt-phys results_v2/no_adaptive_lam_franka_ex_seed0.pth --ckpt-mlp results_v2/mlp_franka_ex_seed0.pth --out experimental_results/v2_control/control_no_adaptive_lam_seed0.json"
+  }
+}

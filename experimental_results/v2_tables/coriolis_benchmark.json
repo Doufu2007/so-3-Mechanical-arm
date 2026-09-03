@@ -1,0 +1,92 @@
+{
+  "rows": [
+    {
+      "n": 7,
+      "batch": 256,
+      "n_params": 1732145,
+      "explicit_ms": 27.681170776486397,
+      "explicit_peak_MiB": 1171.00927734375,
+      "reverse_ms": 10.289989039301872,
+      "reverse_peak_MiB": 908.02490234375,
+      "reverse_max_abs_diff_vs_explicit": 5.53131103515625e-05,
+      "jvp_ms": 6.0027290135622025,
+      "jvp_peak_MiB": 286.28857421875,
+      "jvp_max_abs_diff_vs_explicit": 4.482269287109375e-05,
+      "speedup_explicit_over_reverse": 2.690106925358245,
+      "speedup_explicit_over_jvp": 4.611431019782041
+    },
+    {
+      "n": 12,
+      "batch": 256,
+      "n_params": 1761680,
+      "explicit_ms": 135.77838726341724,
+      "explicit_peak_MiB": 3178.79248046875,
+      "reverse_ms": 25.03221593797207,
+      "reverse_peak_MiB": 2087.9521484375,
+      "reverse_max_abs_diff_vs_explicit": 4.482269287109375e-05,
+      "jvp_ms": 5.835748091340065,
+      "jvp_peak_MiB": 386.220703125,
+      "jvp_max_abs_diff_vs_explicit": 4.00543212890625e-05,
+      "speedup_explicit_over_reverse": 5.424145732837467,
+      "speedup_explicit_over_jvp": 23.26666352595052
+    },
+    {
+      "n": 20,
+      "batch": 256,
+      "n_params": 1835664,
+      "explicit_ms": 372.68269769847393,
+      "explicit_peak_MiB": 8552.7548828125,
+      "reverse_ms": 39.36864025890827,
+      "reverse_peak_MiB": 5104.1953125,
+      "reverse_max_abs_diff_vs_explicit": 4.1961669921875e-05,
+      "jvp_ms": 5.748790875077248,
+      "jvp_peak_MiB": 555.0498046875,
+      "jvp_max_abs_diff_vs_explicit": 3.62396240234375e-05,
+      "speedup_explicit_over_reverse": 9.466486402566161,
+      "speedup_explicit_over_jvp": 64.82801441154635
+    },
+    {
+      "n": 30,
+      "batch": 256,
+      "n_params": 1974404,
+      "explicit_ms": 766.1208271980286,
+      "explicit_peak_MiB": 19698.130859375,
+      "reverse_ms": 56.12402483820915,
+      "reverse_peak_MiB": 11126.609375,
+      "reverse_max_abs_diff_vs_explicit": 2.6702880859375e-05,
+      "jvp_ms": 7.453348860144615,
+      "jvp_peak_MiB": 789.6416015625,
+      "jvp_max_abs_diff_vs_explicit": 2.384185791015625e-05,
+      "speedup_explicit_over_reverse": 13.650496902290135,
+      "speedup_explicit_over_jvp": 102.78880561927215
+    },
+    {
+      "n": 50,
+      "batch": 256,
+      "n_params": 2406084,
+      "explicit_ms": NaN,
+      "explicit_peak_MiB": NaN,
+      "explicit_oom": true,
+      "reverse_ms": 86.21355183422565,
+      "reverse_peak_MiB": 2562.4580078125,
+      "jvp_ms": 7.5746238231658936,
+      "jvp_peak_MiB": 1389.5322265625,
+      "jvp_max_abs_diff_vs_explicit": 1.811981201171875e-05,
+      "speedup_explicit_over_reverse": NaN,
+      "speedup_explicit_over_jvp": NaN
+    }
+  ],
+  "device": "cuda",
+  "note": "三种方法用同一个 H 网络，只改求导方式；数值一致性以 explicit 为基准报告最大绝对偏差",
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-23 16:29:18",
+    "command": "/home/claudeuser/so3-env/bin/python paper/benchmark_coriolis.py --dims 7 12 20 30 50 --batch 256 --reps 5"
+  }
+}

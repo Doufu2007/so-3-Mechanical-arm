@@ -1,0 +1,127 @@
+{
+  "checkpoint": "/root/so3李群机械臂/results_v2/no_physics_baxter_seed1_frac0.5.pth",
+  "variant": "no_physics",
+  "arm": "baxter",
+  "seed": 1,
+  "cfg": {
+    "kind": "delan_ffnn",
+    "encoding": "rotmat",
+    "physics": false,
+    "uncertainty": true,
+    "adaptive_lambda": true,
+    "multiscale_loss": true,
+    "enc_bottleneck": true,
+    "lambda_reg": 0.05,
+    "delan_hidden": [
+      1024,
+      1024,
+      512,
+      256
+    ],
+    "unc_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "dropout": 0.1,
+    "epsilon": 1e-06
+  },
+  "n_eval": 2000,
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-27 00:20:06",
+    "command": "/home/claudeuser/so3-env/bin/python /root/so3李群机械臂/paper/verify_physics.py --ckpt /root/so3李群机械臂/results_v2/no_physics_baxter_seed1_frac0.5.pth"
+  },
+  "E_lambda": {
+    "available": true,
+    "mean": 1.0644641861290438e-06,
+    "std": 1.9141562006552704e-06,
+    "min": 2.3118725778203952e-07,
+    "max": 4.2735144234029576e-05,
+    "frac_below_1e-3": 1.0,
+    "ceiling": 0.1,
+    "hist": [
+      2000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "F_branch_split": {
+    "total": {
+      "r2_global": 0.962266743183136,
+      "r2_per_joint": {
+        "S0": 0.9169030785560608,
+        "S1": 0.9742517471313477,
+        "E0": 0.9144188165664673,
+        "E1": 0.9866197109222412,
+        "W0": 0.7813913226127625,
+        "W1": 0.8046858310699463,
+        "W2": 0.924169659614563
+      },
+      "rmse_per_joint": {
+        "S0": 0.8764344453811646,
+        "S1": 0.7633258104324341,
+        "E0": 0.5055989027023315,
+        "E1": 0.40844133496284485,
+        "W0": 0.07345815002918243,
+        "W1": 0.09904593229293823,
+        "W2": 0.02032439410686493
+      },
+      "nrmse_per_joint": {
+        "S0": 0.049605753272771835,
+        "S1": 0.030090106651186943,
+        "E0": 0.0423024520277977,
+        "E1": 0.024475151672959328,
+        "W0": 0.030607564374804497,
+        "W1": 0.035172563046216965,
+        "W2": 0.05081098526716232
+      },
+      "tau_std_per_joint": {
+        "S0": 3.0403740406036377,
+        "S1": 4.757032871246338,
+        "E0": 1.7282918691635132,
+        "E1": 3.530996561050415,
+        "W0": 0.15711088478565216,
+        "W1": 0.22411438822746277,
+        "W2": 0.0738067477941513
+      },
+      "r2_all_joints": 0.9003485441207886,
+      "r2_active_joints": 0.9480482935905457,
+      "active_joints": [
+        "S0",
+        "S1",
+        "E0",
+        "E1"
+      ],
+      "rmse_overall": 0.5055241584777832,
+      "nrmse_mean": 0.03758065775036812
+    },
+    "uncertainty_rms_Nm": 2.41512131690979,
+    "tau_rms_Nm": 6.705556392669678,
+    "uncertainty_share": 0.3601671771114969
+  }
+}

@@ -1,0 +1,27 @@
+# 大数据 / 模型权重（重新生成即可）
+*.csv
+*.pth
+*.npy
+*.npz
+*.zip
+*.tar.gz
+*.7z
+
+# 数据集目录（CSV 轨迹，用 make_franka_dataset.py 重新生成）
+Dataset_Franka_Ex/
+Dataset_Franka/
+Dataset_*/
+
+# 旧实验 checkpoint（.pth 已忽略，此处兜底目录级排除）
+results_v2/
+
+# 备份
+_backup_*/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统
+nul

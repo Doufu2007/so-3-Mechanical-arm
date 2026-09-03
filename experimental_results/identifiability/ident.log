@@ -1,0 +1,21 @@
+模型   tool/panda.xml
+连杆   8 个 · 自由度 7 · 参数 K = 10x8 = 80
+采样   随机位形 400 点（|q|<=1.4, |dq|<=3, |ddq|<=10）
+
+线性性自检  ||Y·pi - tau|| / ||tau|| = nan  !! 参数化有误，后面的结论不可信
+Traceback (most recent call last):
+  File "C:\se3work\paper\identifiability.py", line 308, in <module>
+    main()
+    ~~~~^^
+  File "C:\se3work\paper\identifiability.py", line 270, in main
+    s, rank, null = analyse(Y, K, a.tol)
+                    ~~~~~~~^^^^^^^^^^^^^
+  File "C:\se3work\paper\identifiability.py", line 198, in analyse
+    U, s, Vt = np.linalg.svd(A, full_matrices=False)
+               ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\郑傅韬\AppData\Roaming\Python\Python313\site-packages\numpy\linalg\_linalg.py", line 1841, in svd
+    u, s, vh = gufunc(a, signature=signature)
+               ~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\郑傅韬\AppData\Roaming\Python\Python313\site-packages\numpy\linalg\_linalg.py", line 154, in _raise_linalgerror_svd_nonconvergence
+    raise LinAlgError("SVD did not converge")
+numpy.linalg.LinAlgError: SVD did not converge

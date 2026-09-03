@@ -1,0 +1,133 @@
+{
+  "checkpoint": "/root/so3李群机械臂/results_v2/no_physics_franka_fn_seed1.pth",
+  "variant": "no_physics",
+  "arm": "franka_fn",
+  "seed": 1,
+  "cfg": {
+    "kind": "delan_ffnn",
+    "encoding": "rotmat",
+    "physics": false,
+    "physics_kind": "delan",
+    "se3_xml": "",
+    "uncertainty": true,
+    "adaptive_lambda": true,
+    "multiscale_loss": true,
+    "enc_bottleneck": true,
+    "lambda_reg": 0.05,
+    "dual_ascent": false,
+    "dual_delta_frac": 0.3,
+    "dual_lambda_init": 1.0,
+    "dual_lr": 0.001,
+    "delan_hidden": [
+      1024,
+      1024,
+      512,
+      256
+    ],
+    "unc_hidden": [
+      2048,
+      1024,
+      512,
+      256
+    ],
+    "dropout": 0.1,
+    "epsilon": 1e-06
+  },
+  "n_eval": 2000,
+  "provenance": {
+    "git_commit": "6f8ad7729f3b1050a237721b9cac5128fb355cb7",
+    "python": "3.11.15",
+    "torch": "2.13.0+cu130",
+    "numpy": "2.4.6",
+    "platform": "Linux-5.15.0-78-generic-x86_64-with-glibc2.35",
+    "gpu": "NVIDIA GeForce RTX 5090",
+    "cuda": "13.0",
+    "timestamp": "2026-08-27 00:20:30",
+    "command": "/home/claudeuser/so3-env/bin/python /root/so3李群机械臂/paper/verify_physics.py --ckpt /root/so3李群机械臂/results_v2/no_physics_franka_fn_seed1.pth"
+  },
+  "E_lambda": {
+    "available": true,
+    "mean": 1.0988640042342013e-06,
+    "std": 1.0393563343313872e-06,
+    "min": 2.38036435007416e-07,
+    "max": 1.2765628525812645e-05,
+    "frac_below_1e-3": 1.0,
+    "ceiling": 0.1,
+    "hist": [
+      2000,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "F_branch_split": {
+    "total": {
+      "r2_global": 0.9280121326446533,
+      "r2_per_joint": {
+        "J1": 0.604669451713562,
+        "J2": 0.9568435549736023,
+        "J3": 0.42641085386276245,
+        "J4": 0.9078204035758972,
+        "J5": 0.6820577383041382,
+        "J6": 0.8171257972717285,
+        "J7": 0.9711049199104309
+      },
+      "rmse_per_joint": {
+        "J1": 3.2467777729034424,
+        "J2": 4.278700828552246,
+        "J3": 1.7488470077514648,
+        "J4": 1.8550797700881958,
+        "J5": 0.3942002058029175,
+        "J6": 0.3161596357822418,
+        "J7": 0.022050531581044197
+      },
+      "nrmse_per_joint": {
+        "J1": 0.08079887926578522,
+        "J2": 0.040857717394828796,
+        "J3": 0.1183510422706604,
+        "J4": 0.05808684602379799,
+        "J5": 0.08633032441139221,
+        "J6": 0.08331689238548279,
+        "J7": 0.05134353041648865
+      },
+      "tau_std_per_joint": {
+        "J1": 5.163835048675537,
+        "J2": 20.596296310424805,
+        "J3": 2.30914568901062,
+        "J4": 6.110055446624756,
+        "J5": 0.6991055011749268,
+        "J6": 0.7393162250518799,
+        "J7": 0.1297200322151184
+      },
+      "r2_all_joints": 0.7665761709213257,
+      "r2_active_joints": 0.7239360809326172,
+      "active_joints": [
+        "J1",
+        "J2",
+        "J3",
+        "J4"
+      ],
+      "rmse_overall": 2.2552967071533203,
+      "nrmse_mean": 0.07415503263473511
+    },
+    "uncertainty_rms_Nm": 8.13612174987793,
+    "tau_rms_Nm": 8.458374977111816,
+    "uncertainty_share": 0.9619012838629291
+  }
+}

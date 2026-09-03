@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<mujoco model="franka_panda">
+  <option timestep="0.005" gravity="0 0 -9.81"/>
+
+  <default>
+    <geom type="box" size="0.04 0.04 0.04" rgba="0.5 0.5 0.5 1" mass="0.5"/>
+  </default>
+
+  <worldbody>
+    <light name="top" pos="0 0 3"/>
+    <body name="base" pos="0 0 0">
+      <geom name="base_plate" type="box" size="0.08 0.08 0.02" pos="0 0 0" rgba="0.3 0.3 0.3 1" mass="2.0"/>
+      <body name="link0" pos="0 0 0.02">
+        <joint name="joint1" type="hinge" axis="0 0 1" range="-166 166"/>
+        <geom name="link0_geom" type="cylinder" size="0.05 0.1" pos="0 0 0.1" rgba="0.8 0.2 0.2 1" mass="1.5"/>
+        <inertial pos="0 0 0.1" mass="1.5" diaginertia="0.001 0.001 0.001"/>
+        <body name="link1" pos="0 0 0.2">
+          <joint name="joint2" type="hinge" axis="0 1 0" range="-166 166"/>
+          <geom name="link1_geom" type="box" size="0.04 0.04 0.12" pos="0 0 0.12" rgba="0.2 0.8 0.2 1" mass="1.5"/>
+          <inertial pos="0 0 0.12" mass="1.5" diaginertia="0.002 0.002 0.001"/>
+          <body name="link2" pos="0 0 0.24">
+            <joint name="joint3" type="hinge" axis="0 0 1" range="-166 166"/>
+            <geom name="link2_geom" type="cylinder" size="0.04 0.12" pos="0 0 0.12" rgba="0.2 0.2 0.8 1" mass="1.2"/>
+            <inertial pos="0 0 0.12" mass="1.2" diaginertia="0.002 0.002 0.001"/>
+            <body name="link3" pos="0 0 0.24">
+              <joint name="joint4" type="hinge" axis="0 1 0" range="-166 166"/>
+              <geom name="link3_geom" type="box" size="0.03 0.03 0.1" pos="0 0 0.1" rgba="0.8 0.8 0.2 1" mass="1.0"/>
+              <inertial pos="0 0 0.1" mass="1.0" diaginertia="0.001 0.001 0.001"/>
+              <body name="link4" pos="0 0 0.2">
+                <joint name="joint5" type="hinge" axis="0 0 1" range="-166 166"/>
+                <geom name="link4_geom" type="cylinder" size="0.03 0.08" pos="0 0 0.08" rgba="0.8 0.2 0.8 1" mass="0.8"/>
+                <inertial pos="0 0 0.08" mass="0.8" diaginertia="0.001 0.001 0.001"/>
+                <body name="link5" pos="0 0 0.16">
+                  <joint name="joint6" type="hinge" axis="0 1 0" range="-166 166"/>
+                  <geom name="link5_geom" type="box" size="0.025 0.025 0.06" pos="0 0 0.06" rgba="0.2 0.8 0.8 1" mass="0.5"/>
+                  <inertial pos="0 0 0.06" mass="0.5" diaginertia="0.001 0.001 0.001"/>
+                  <body name="link6" pos="0 0 0.12">
+                    <joint name="joint7" type="hinge" axis="0 0 1" range="-166 166"/>
+                    <geom name="link6_geom" type="sphere" size="0.03" pos="0 0 0" rgba="0.5 0.5 0.5 1" mass="0.3"/>
+                    <inertial pos="0 0 0" mass="0.3" diaginertia="0.0005 0.0005 0.0005"/>
+                    <body name="hand" pos="0 0 0.05">
+                      <geom name="hand_geom" type="box" size="0.015 0.015 0.03" pos="0 0 0.03" rgba="1 0.5 0 1" mass="0.1"/>
+                      <inertial pos="0 0 0.03" mass="0.1" diaginertia="0.0001 0.0001 0.0001"/>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+</mujoco>
